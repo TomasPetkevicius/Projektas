@@ -1,0 +1,40 @@
+.relative{position: relative;left: 825px;}
+
+img{border-radius: 10%;}
+
+#nav {width: 100%;
+     position: absolute;
+     top: 10px;}
+
+h2{ font-size: 75px; color: #E1F5A9; text-align: left;position: relative; bottom: 110px;transform: rotate(10deg);}
+/* unvisited link */
+a:link {color: white;font-size: 25px;}
+/* visited link */
+a:visited {color: yellow; font-size: 45px;}
+ul {list-style-type: none;
+  margin: 0;
+  padding: 0;}
+li {display: inline;}
+.dropbtn {background-color: skyblue;
+  opacity:10;
+  text-decoration-color: yellow;
+  padding: 16px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;}
+.dropdown {position: relative;
+  display: inline-block;}
+.dropdown-content {display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;}
+
+.dropdown-content a {color: black;
+  padding: 1px 1px;
+  text-decoration: none;
+  display: block;}
+.dropdown-content a:hover {background-color: skyblue;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: white;}
