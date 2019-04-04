@@ -1,0 +1,64 @@
+.logo{position: absolute; 
+  top: 40px;
+  right: 70px;
+  width: 200px;
+  height: 100px;
+  right: 884px;
+  width: 200px;
+  height: 100px;}
+img{border-radius: 10%;}
+#NAVMenu{}
+#nav {width: 50%;
+     position: absolute;
+     top: 25px;left: 255px;}
+#nav2 {width: 50%;
+     position: absolute;
+     top: 225px;left: 300px;}
+
+body, html {height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;}
+
+.bg-image {
+  
+  background-image: url("../img/priekis.jpg");  
+  
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+    height: 90%;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    z-index: -1;}
+.content {max-width: 1000px;
+  margin: auto;}
+h2{ font-size: 75px; color: #E1F5A9; text-align: left;position: absolute; bottom: 135px;transform: rotate(-2deg); z-index: 1;}
+table{background-color: #F7FE2E; border: 1px solid black;z-index: 1; position: absolute; bottom: 75px; font-size: 25px;}
+a:link {color: black;font-size: 25px;}
+ul {list-style-type: none;
+  margin: 0;
+  padding: 0;}
+li {display: inline;}
+.dropbtn {background-color: skyblue;
+  opacity:10;
+  text-decoration-color: yellow;
+  padding: 16px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;}
+.dropdown {position: relative;
+  display: inline-block;}
+.dropdown-content {display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;}
+
+.dropdown-content a {color: black;
+  padding: 1px 1px;
+  text-decoration: none;
+  display: block;}
+.dropdown-content a:hover {background-color: skyblue;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: white;}
