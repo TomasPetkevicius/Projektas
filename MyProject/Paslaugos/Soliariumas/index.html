@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Soliariumas/CSS/styles.css">    
+    <title>Soliariumas</title>
+</head>
+<body onload="checkCookie()">
+<div class="bg"></div>
+<div class="content">
+<h1>Aksominis įdegis</h1>
+<p>Grojant smagiai muzikėlei, kviečiame pasideginti stovimam arba gulimam soliariume ir ir akimirksniu nukeliauti į karštus, egzotinius kraštus! O po tokios kelionės sugryžus atgal į Lietuvą, pasigirti puikiu įdegiu saulėje!
+        
+        Galima įsigyti abonentą arba padovanoti jį kaip dovanų kuponą.
+<br>
+<a href="img/kuponas.jpg"><img src="img/kuponasrs.jpg"></a>
+Registracija tel. 8 - 6</p>
+<div class="row">
+    <div class="column">
+        <img src="img/durys.jpg" style="width:100%; height: 150px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="img/gulimas.jpg" style="width:100%; height: 150px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="img/stovimas.jpg" style="width:100%; height: 150px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="img/stovimas_prav.jpg" style="width:100%; height: 150px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    </div>    
+</div>
+<div id="myModal" class="modal">
+<span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+<div class="mySlides">
+  <div class="numbertext">1 / 4</div>
+    <img src="img/durys.jpg" style="width:100%">
+</div>
+<div class="mySlides">
+  <div class="numbertext">2 / 4</div>
+    <img src="img/gulimas.jpg" style="width:100%">
+</div>
+<div class="mySlides">
+  <div class="numbertext">3 / 4</div>
+      <img src="img/stovimas.jpg" style="width:100%">
+</div>
+<div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+      <img src="img/stovimas_prav.jpg" style="width:100%">
+</div>                
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<div class="caption-container">
+<p id="caption"></p>
+</div>
+<div class="column">
+    <img class="demo cursor" src="img/durys.jpg" style="width:100%" onclick="currentSlide(1)" alt="Užeiti pasideginti?">
+</div>
+<div class="column">
+    <img class="demo cursor" src="img/gulimas.jpg" style="width:100%" onclick="currentSlide(2)" alt="Gulimas">
+</div>
+<div class="column">
+    <img class="demo cursor" src="img/stovimas.jpg" style="width:100%" onclick="currentSlide(3)" alt="Stovimas">
+</div>
+<div class="column">
+    <img class="demo cursor" src="img/stovimas_prav.jpg" style="width:100%" onclick="currentSlide(4)" alt="Kviečiame pasideginti">
+</div>      
+</div>
+</div>
+<script>
+    function openModal() {document.getElementById('myModal').style.display = "block";}
+    function closeModal() {document.getElementById('myModal').style.display = "none";}
+    var slideIndex = 1; showSlides(slideIndex);
+    function plusSlides(n) {showSlides(slideIndex += n);}
+    function currentSlide(n) {showSlides(slideIndex = n);}
+    function showSlides(n) {var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";}
+    for (i = 0; i < dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
+    slides[slideIndex-1].style.display = "block"; dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;}
+    </script>        
+    <footer>
+            &copy;<script type="text/javascript">
+  document.write(new Date().getFullYear()+" UAB TAVO SVAJA&trade;");
+                 </script>     
+    </footer>
+    </div>    
+</body>
+</html>
