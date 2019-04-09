@@ -1,0 +1,11 @@
+body, html {height: 100%; margin: 0;}
+.bg {background-image: url("../img/durys.jpg"); height: 50%; width: 100%;margin: auto;
+  background-position: center; background-repeat: no-repeat; background-size: cover;}
+img{max-height: 250px; max-width: 500px;}
+h1{font-size: 36px;}
+p{font-size: 32px;}
+.content {max-width: 1000px; margin: auto;}
+h1{font-size: 36px;}
+p{font-size: 32px;}
+table{background-color: beige; border-radius: 5px;
+font-size: 36px;}

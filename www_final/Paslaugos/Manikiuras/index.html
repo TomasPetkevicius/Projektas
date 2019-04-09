@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Manikiuras/CSS/styles.css">
+    <title>Manikiūras</title>
+</head><body>
+   <div class="bg"></div>
+    <div class="content">
+    <h1>Profesionali manikiūrininkė Ugnė</h1>
+    <p>
+    Atliekamos visos manikiūro, pedikiūro, depiliacijos, blakstienų priauginimo paslaugos.Plačiau su Ugnės darbais galite susipažinti jos <a href="https://www.facebook.com/pg/Vugne_beauty_box-1909337919381905/posts/?ref=page_internal">facebook paskyroje</a>. 
+    </p>
+    <div class="row">
+        <div class="column">
+            <img src="img/manik.jpg" style="width:100%; height: 150px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+<div class="column">
+    <img src="img/manikiur.jpg" style="width:100%; height: 150px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img/nagai.jpg" style="width:100%; height: 150px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img/Makiaz.jpg" style="width:100%; height: 150px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>    
+</div>
+<div id="myModal" class="modal">
+ <span class="close cursor" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+<div class="mySlides">
+  <div class="numbertext">1 / 4</div>
+      <img src="img/manik.jpg" style="width:100%; height: 700px;">
+</div>
+<div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+     <img src="img/manikiur.jpg" style="width:100%; height: 700px;">
+</div>
+<div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+     <img src="img/nagai.jpg" style="width:100%; height: 700px;">
+</div>
+<div class="mySlides">
+  <div class="numbertext">4 / 4</div>
+    <img src="img/Makiaz.jpg" style="width:100%; height: 700px;">
+</div>                
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<div class="caption-container">
+<p id="caption"></p>
+</div>
+<div class="column">
+    <img class="demo cursor" src="img/manik.jpg" style="width:100%" onclick="currentSlide(1)" alt="Manikiūrininkės sertifikatai">
+</div>
+<div class="column">
+ <img class="demo cursor" src="img/manikiur.jpg" style="width:100%" onclick="currentSlide(2)" alt="Manikiūro stalas">
+</div>
+<div class="column">
+<img class="demo cursor" src="img/nagai.jpg" style="width:100%" onclick="currentSlide(3)" alt="Gražus darbas">
+</div>
+<div class="column">
+ <img class="demo cursor" src="img/Makiaz.jpg" style="width:100%" onclick="currentSlide(4)" alt="Makiažas">
+</div>      
+</div>
+</div>
+<script>
+    function openModal() {document.getElementById('myModal').style.display = "block";}
+    function closeModal() {document.getElementById('myModal').style.display = "none";}
+    var slideIndex = 1; showSlides(slideIndex);
+    function plusSlides(n) {showSlides(slideIndex += n);}
+    function currentSlide(n) {showSlides(slideIndex = n);}
+    function showSlides(n) {var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";}
+    for (i = 0; i < dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
+    slides[slideIndex-1].style.display = "block"; dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;}
+    </script>        
+    <footer>
+            &copy;<script type="text/javascript">
+  document.write(new Date().getFullYear()+" UAB TAVO SVAJA&trade;");
+                 </script>     
+    </footer>
+    </div>    
+</body>
+</html>
