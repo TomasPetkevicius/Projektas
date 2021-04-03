@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings!</title>
+    
+   </head>
+
+<body>
+    <h1>Pasisveikinkime!</h1>
+    
+   
+    <input id = "input" type="text" placeholder="Koks tavo vardas?">
+    
+    <button onclick = "greet()">Pateikti</button>
+    
+     <script>
+              
+         //this script replaces characters of the user input, to greet user grammatically correct in lithuanian
+         
+        function greet (){
+            var txt = document.getElementById("input").value;
+            
+            var chs = txt.split("");
+            var glr = chs[chs.length - 1];
+    
+            var gls = chs[chs.length - 2] + chs[chs.length - 1];
+                       
+                            
+           if(gls == "us"){
+                chs.splice(-2, 1, "a");                        
+                chs.splice(-1, 1, "u");}
+               
+           else if(gls == "as"){
+               chs.splice(-1, 1, "i");}
+            
+            else if(gls == "is"){
+               chs.pop();}
+                      
+            else if(gls == "tė"){chs.splice(-1, 1, "e")}
+            
+            else if(gls == "lė"){chs.splice(-1, 1, "e")}
+            
+            else if(gls == "nė"){chs.splice(-1, 1, "e")}
+            
+            else{gls = gls}
+            
+           
+           var firt = chs[0];
+   var first = firt.toUpperCase();
+            chs.splice(0, 1, first);
+            
+                       var name = chs.join("");
+            
+             document.write(name + ", Labas!");
+        }
+                   
+        </script>
+</body>
+</html>
